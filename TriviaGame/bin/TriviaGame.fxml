@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TriviaGameController">
+   <children>
+      <Label style="-fx-padding: 30;" text="Welcome to the trivia game!">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="QuestionLabel" style="-fx-padding: 10;" text="current question">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="FirstAnswer" mnemonicParsing="false" onAction="#FirstSelected" style="-fx-padding: 5;" text="CheckBox" />
+      <CheckBox fx:id="SecondAnswer" mnemonicParsing="false" onAction="#SecondSelected" style="-fx-padding: 5;" text="CheckBox" />
+      <CheckBox fx:id="ThirdAnswer" mnemonicParsing="false" onAction="#ThirdSelected" style="-fx-padding: 5;" text="CheckBox" />
+      <CheckBox fx:id="ForthAnswer" mnemonicParsing="false" onAction="#ForthSelected" style="-fx-label-padding: 5;" text="CheckBox" />
+      <Label fx:id="Indicator" text="Good Luck!" />
+      <Label fx:id="PointsLabel" style="-fx-padding: 10;" text="Current points count" textFill="#2bb0e3">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="EndButton" mnemonicParsing="false" onAction="#EndButtonPressed" style="-fx-background-color: #ee4a4a;" text="End current game" />
+      <Button fx:id="NewGameButton" mnemonicParsing="false" onAction="#NewGamePressed" style="-fx-background-color: #14c31f;" text="Start new game" />
+   </children>
+</VBox>
