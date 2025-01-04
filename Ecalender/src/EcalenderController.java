@@ -10,16 +10,16 @@ import java.util.stream.IntStream;
 public class EcalenderController {
 
     @FXML
-    private Label monthYearLabel; // Displays the current month and year
+    private Label monthYearLabel; 
 
     @FXML
-    private GridPane calendarGrid; // Grid to display the days of the month
+    private GridPane calendarGrid; 
 
     @FXML
-    private Button prevButton; // Button to navigate to the previous month
+    private Button prevButton; 
 
     @FXML
-    private Button nextButton; // Button to navigate to the next month
+    private Button nextButton; 
 
     @FXML
     private ComboBox<Integer> yearComboBox; // Dropdown to select the year
@@ -45,8 +45,8 @@ public class EcalenderController {
         // Populate the calendar grid
         updateCalendar();
 
-        // Ensure the grid lines are always visible
-        calendarGrid.setGridLinesVisible(false);
+        
+        calendarGrid.setGridLinesVisible(false); // To remove gridPane border lines
 
         // Attach actions to navigation buttons
         prevButton.setOnAction(e -> changeMonth(-1));
@@ -67,7 +67,7 @@ public class EcalenderController {
     private void setupYearComboBox() {
         // Populate the year dropdown with a range of years around the current year
         int currentYear = calendar.get(Calendar.YEAR);
-        yearComboBox.getItems().addAll(IntStream.range(currentYear - 5, currentYear + 6).boxed().collect(Collectors.toList()));
+        yearComboBox.getItems().addAll(IntStream.range(currentYear - 5, currentYear + 6).boxed().collect(Collectors.toList())); // Assuming 10 years is enough..
         yearComboBox.setValue(currentYear); // Set the default selected year
     }
 
@@ -147,7 +147,7 @@ public class EcalenderController {
 
         // Create a dialog with a text area for multi-line notes
         Dialog<String> dialog = new Dialog<>();
-        dialog.setTitle("Notes");
+        dialog.setTitle("Meetings");
         dialog.setHeaderText(dateKey + "\nAdd or Edit Meetings:" );
 
         TextArea textArea = new TextArea(existingNotes.toString());
