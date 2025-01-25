@@ -34,16 +34,6 @@ public class Bank {
 	            new Transaction(2, (int) (Math.random() * 2001) - 1000),
 	            new Transaction(3, (int) (Math.random() * 2001) - 1000),
 	            new Transaction(4, (int) (Math.random() * 2001) - 1000),
-	            new Transaction(0, 1000),
-	            new Transaction(1, 1000),
-	            new Transaction(2, 1000),
-	            new Transaction(3, 1000),
-	            new Transaction(4, 1000),
-	            new Transaction(0, 1000),
-	            new Transaction(1, 1000),
-	            new Transaction(2, 1000),
-	            new Transaction(3, 1000),
-	            new Transaction(4, 1000)
 	        };
 		
 		TransactionPool transactionPool = new TransactionPool(transactionArray);
